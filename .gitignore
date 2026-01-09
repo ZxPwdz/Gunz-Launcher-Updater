@@ -7,8 +7,7 @@ publish/
 *.pdb
 *.cache
 
-# Claude Code local settings
-.claude/
+
 
 # Visual Studio
 .vs/
