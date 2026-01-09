@@ -1,4 +1,4 @@
-# Gunz Launcher & Updater System
+# Gunz Launcher & Updater
 
 ![Launcher Preview](preview.gif)
 
