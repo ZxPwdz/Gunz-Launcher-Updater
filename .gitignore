@@ -1,0 +1,95 @@
+# Build outputs
+bin/
+obj/
+publish/
+*.exe
+*.dll
+*.pdb
+*.cache
+
+# Claude Code local settings
+.claude/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vspscc
+*.vssscc
+
+# .NET
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# NuGet
+packages/
+*.nuget.props
+*.nuget.targets
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+*.swp
+*.swo
+*~
+.idea/
+*.iml
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# WebView2 cache
+*.WebView2/
+WebView2/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# PHP
+.phpunit.result.cache
+
+# Data files (user-specific)
+GunzWeb/data/*.json
+!GunzWeb/data/.gitkeep
+
+# Sensitive configuration
+appsettings.*.json
+secrets.json
+*.pfx
+*.key
+
+# Windows reserved names
+nul
+NUL
+con
+CON
+aux
+AUX
+prn
+PRN

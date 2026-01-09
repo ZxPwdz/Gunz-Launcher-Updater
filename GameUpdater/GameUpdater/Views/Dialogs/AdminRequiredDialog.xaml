@@ -1,0 +1,101 @@
+<Window x:Class="GameUpdater.Views.Dialogs.AdminRequiredDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Administrator Required"
+        Width="420" Height="280"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner">
+
+    <Border CornerRadius="8"
+            Background="{StaticResource PrimaryBackgroundBrush}"
+            BorderBrush="{StaticResource BorderBrush}"
+            BorderThickness="1">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="20" ShadowDepth="0" Color="Black" Opacity="0.5"/>
+        </Border.Effect>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+
+            <!-- Title Bar -->
+            <Border Grid.Row="0"
+                    Background="{StaticResource TitleBarGradientBrush}"
+                    CornerRadius="8,8,0,0"
+                    MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+                <Grid>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0">
+                        <!-- Shield Icon -->
+                        <Border Width="24" Height="24" CornerRadius="12">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                    <GradientStop Color="#FFD700" Offset="0"/>
+                                    <GradientStop Color="#FFA500" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <TextBlock Text="!"
+                                       Foreground="#333"
+                                       FontWeight="Bold"
+                                       FontSize="14"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                        </Border>
+                        <TextBlock Text="ADMINISTRATOR REQUIRED"
+                                   Style="{StaticResource TitleTextStyle}"
+                                   Margin="12,0,0,0"/>
+                    </StackPanel>
+
+                    <Button Style="{StaticResource CloseButtonStyle}"
+                            Click="CloseButton_Click"
+                            HorizontalAlignment="Right">
+                        <Path Data="{StaticResource CloseIcon}"
+                              Fill="{StaticResource TextSecondaryBrush}"
+                              Width="12" Height="12"
+                              Stretch="Uniform"/>
+                    </Button>
+                </Grid>
+            </Border>
+
+            <!-- Content -->
+            <StackPanel Grid.Row="1"
+                        VerticalAlignment="Center"
+                        Margin="30,20">
+                <TextBlock Text="Administrator privileges are required to update the game files."
+                           Style="{StaticResource StatusTextStyle}"
+                           TextWrapping="Wrap"
+                           FontSize="14"
+                           Margin="0,0,0,16"/>
+
+                <TextBlock Text="The launcher needs to write files to the game directory. Please restart with administrator rights to continue."
+                           Style="{StaticResource MutedTextStyle}"
+                           TextWrapping="Wrap"/>
+            </StackPanel>
+
+            <!-- Footer Buttons -->
+            <Border Grid.Row="2"
+                    Background="{StaticResource SecondaryBackgroundBrush}"
+                    CornerRadius="0,0,8,8">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <Button Content="Cancel"
+                            Style="{StaticResource NavButtonStyle}"
+                            Click="CancelButton_Click"
+                            Width="100"
+                            Margin="0,0,16,0"/>
+                    <Button Content="Restart as Admin"
+                            Style="{StaticResource PlayButtonStyle}"
+                            Width="160"
+                            Height="40"
+                            Click="RestartAsAdminButton_Click"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
