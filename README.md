@@ -8,7 +8,7 @@ A modern, dark-themed game launcher and auto-updater system for Gunz Online priv
 
 ---
 
-## Admin Panel
+## Admin Panel - For the GunzWebLauncher DATA
 
 ![Admin Panel Preview](admin-preview.gif)
 
